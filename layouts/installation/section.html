@@ -1,0 +1,39 @@
+
+{{ define "head_end" }}
+	{{ partial "stylesheet-link" "baguetteBox.min" }}
+	{{ partial "script-src" "baguetteBox" }}
+	{{ partial "script-src" "installationItems" }}
+	{{ partial "stylesheet-link" "_inspirations-modal" }}
+	{{ partial "stylesheet-link" "_installations-modal" }}
+	{{ partial "stylesheet-link" "_inquiry-form" }}
+{{ end }}
+
+{{ define "main" }}
+
+
+	{{ $blocks := (partial "get-section-pages" (partial "get-section-slug" .)) }}
+	
+	{{ with index $blocks 0 }}
+		{{ .Render (default "generic-block" .Params.render_as) }}
+	{{ end }}
+	
+	<section id='installation-items' class="image-gallery">
+		{{ range (shuffle (partial "get-section-pages" "installation-items")) }}
+				{{ .Render "installation-card" }}
+		{{ end }}
+	</section>
+	
+	{{ range $index, $block := $blocks }}
+		{{ if ne $index 0 }}
+			{{ $block.Render (default "generic-block" $block.Params.render_as) }}
+		{{ end }}
+	{{ end }}
+
+	{{ partial "installation-modal" . }}
+
+	{{ partial "inquiry-form" . }}
+
+{{ end }}
+
+
+

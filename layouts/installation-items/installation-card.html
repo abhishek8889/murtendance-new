@@ -1,0 +1,36 @@
+{{ $img := (partial "get-first-image" .) }}
+{{ $projects := slice }}
+{{ $projects = delimit $projects "" | safeHTML }}
+{{ $currentContentPath := path.Dir .File.Dir }}
+{{ $path := printf "content/%s" $currentContentPath  }} 
+{{ $params := .Params.projects | jsonify }}
+{{ $prods := .Params.products | jsonify  }}
+{{ $images := readDir $path }}
+<div class="project-slider-wrapper" id="{{ .Params.uniquename }}">
+   <a href='{{ $img.Permalink }}'
+      data-at-450="{{ ($img.Resize "400x").Permalink }}"
+      data-at-800="{{ ($img.Resize "650x").Permalink }}"
+      data-at-1366="{{ ($img.Resize "1200x").Permalink }}"
+      data-projects="{{ .Params.projects | jsonify }}"
+      data-products="{{ .Params.products | jsonify }}"
+      >
+      {{ partial "image-9-16" (partial "get-first-image" .) }}
+   </a>
+
+   {{ range $index, $image := $images }}
+      {{ if ne $index 0 }}
+         {{ $img := $image.Name }}
+         {{ $imgPath := printf "%s/%s" $currentContentPath $img }}
+         {{ $imgURL := absURL $imgPath }}
+         <a href="{{ $imgURL }}" style="display: none;"
+            data-at-450="{{ $imgURL }}"
+            data-at-800="{{ $imgURL }}"
+            data-at-1366="{{ $imgURL }}"
+            data-at-1920="{{ $imgURL }}"
+            data-projects="{{ $params }}"
+            data-products="{{ $prods }}">
+            <img src="{{ $imgURL }}">
+         </a>
+      {{ end }}
+   {{ end }}
+</div>

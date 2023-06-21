@@ -1,0 +1,34 @@
+---
+projects:
+- name: HALL D'ENTRÉE ST-BRUNO
+  images:
+    - MurTendance-ProjetSt-Bruno-01.jpg
+    - MurTendance-ProjetSt-Bruno-02.jpg
+    - MurTendance-ProjetSt-Bruno-06.jpg
+    - MurTendance-ProjetSt-Bruno-07.jpg
+    - MurTendance-ProjetSt-Bruno-10.jpg
+
+- name: MANTEAU DE FOYER LAVAL
+  images:
+    - MANTEAU-DE-FOYER-LAVAL-first.jpg
+    - MANTEAU-DE-FOYER-LAVAL-second.jpg
+    - MANTEAU-DE-FOYER-LAVAL-third.jpg
+    - MANTEAU-DE-FOYER-LAVAL-fourth.jpg
+    - MANTEAU-DE-FOYER-LAVAL-fifth.jpg
+
+- name: NELSON&MCCANN
+  images:
+    - NELSON-MCCANN-first.jpg
+    - NELSON-MCCANN-second.jpg
+    - NELSON-MCCANN-third.jpg
+    - NELSON-MCCANN-fourth.jpg
+    - NELSON-MCCANN-fifth.jpg
+
+- name: PROJET CONDO LAVAL
+  images:
+    - Murtendance-3170stelzearO-01.jpg
+    - Murtendance-3170stelzearO-07.jpg
+    - Murtendance-3170stelzearO-13.jpg
+    - Murtendance-3170stelzearO-18.jpg
+    - Murtendance-3170stelzearO-19.jpg
+---

@@ -1,0 +1,99 @@
+<script>
+    const PRODUCTS_SHOWN = {{ i18n "project_shown" }};
+    // const slide = document.querySelectorAll(".image-gallery > .project-slider-wrapper")
+    //      slide.forEach(slides=>{
+    //     slides.addEventListener("click" , function(e){
+    //         e.preventDefault();
+    //         var selectedDiv = this.children[1]
+    //         var idVal = selectedDiv.getAttribute('id');
+    //         // console.log(`  '#${idVal}'`);
+    //         $on.dom(() => baguetteBox.run(`${idVal}`, { 
+    //             captions: (el) => {
+    //                 const prods = JSON.parse($get(el, 'data-products'));
+    //                 console.log('prods are => '+ prods);
+    //                 const productStr = $map(prods, i => `<li><span class='product'>${i.project}</span></li>`).join(' ');
+    //                 // console.log('' + i.product)
+    //                 return `<h2>${PRODUCTS_SHOWN}</h2><ul class='products'>${productStr}</ul>`;
+    //             }
+    //         }));
+    //     });
+    // });
+    // console.log('idval => '  +idVal);
+    
+            //  $on.dom(() => baguetteBox.run('#nelcon-mccann', { 
+            //     captions: (el) => {
+            //         const prods = JSON.parse($get(el, 'data-products'));
+            //         console.log('prods are => '+ prods);
+            //         const productStr = $map(prods, i => `<li><span class='product'>${i.project}</span></li>`).join(' ');
+            //         // console.log('' + i.product)
+            //         return `<h2>${PRODUCTS_SHOWN}</h2><ul class='products'>${productStr}</ul>`;
+            //     }
+            // }));
+            // $on.dom(() => baguetteBox.run('#manteau-de-foyer', { 
+            //     captions: (el) => {
+            //         const prods = JSON.parse($get(el, 'data-products'));
+            //         console.log('prods are => '+ prods);
+            //         const productStr = $map(prods, i => `<li><span class='product'>${i.project}</span></li>`).join(' ');
+            //         // console.log('' + i.product)
+            //         return `<h2>${PRODUCTS_SHOWN}</h2><ul class='products'>${productStr}</ul>`;
+            //     }
+            // }));
+            // $on.dom(() => baguetteBox.run('#hall-d-entree', { 
+            //     captions: (el) => {
+            //         const prods = JSON.parse($get(el, 'data-products'));
+            //         console.log('prods are => '+ prods);
+            //         const productStr = $map(prods, i => `<li><span class='product'>${i.project}</span></li>`).join(' ');
+            //         // console.log('' + i.product)
+            //         return `<h2>${PRODUCTS_SHOWN}</h2><ul class='products'>${productStr}</ul>`;
+            //     }
+            // }));
+            // $on.dom(() => baguetteBox.run('#condo-laval', { 
+            //     captions: (el) => {
+            //         const prods = JSON.parse($get(el, 'data-products'));
+            //         console.log('prods are => '+ prods);
+            //         const productStr = $map(prods, i => `<li><span class='product'>${i.project}</span></li>`).join(' ');
+            //         // console.log('' + i.product)
+            //         return `<h2>${PRODUCTS_SHOWN}</h2><ul class='products'>${productStr}</ul>`;
+            //     }
+            // }));
+            
+            
+            
+            // ------------------------------------------------
+            $on.dom(() => baguetteBox.run('#nelcon-mccann', { 
+                captions: (el) => {
+                    const prods = JSON.parse($get(el, 'data-products'));
+                    const project_name = JSON.parse($get(el, 'data-projects'));
+                    const project_name_ = $map(project_name,i => i.project);
+                    const productsName = $map(prods, i => `<li><span class='product'>${i}</span></li>`).join(' '); 
+                    return `<h2>${PRODUCTS_SHOWN}</h2> <h6>${project_name_}</h6> <ul class='products'>${productsName}</ul>`;
+                }
+            }));
+            $on.dom(() => baguetteBox.run('#manteau-de-foyer', { 
+                captions: (el) => {
+                    const prods = JSON.parse($get(el, 'data-products'));
+                    const project_name = JSON.parse($get(el, 'data-projects'));
+                    const project_name_ = $map(project_name,i => i.project);
+                    const productsName = $map(prods, i => `<li><span class='product'>${i}</span></li>`).join(' '); 
+                    return `<h2>${PRODUCTS_SHOWN}</h2> <h6>${project_name_}</h6> <ul class='products'>${productsName}</ul>`;
+                }
+            }));
+            $on.dom(() => baguetteBox.run('#hall-d-entree', { 
+                captions: (el) => {
+                    const prods = JSON.parse($get(el, 'data-products'));
+                    const project_name = JSON.parse($get(el, 'data-projects'));
+                    const project_name_ = $map(project_name,i => i.project);
+                    const productsName = $map(prods, i => `<li><span class='product'>${i}</span></li>`).join(' '); 
+                    return `<h2>${PRODUCTS_SHOWN}</h2> <h6>${project_name_}</h6> <ul class='products'>${productsName}</ul>`;
+                }
+            }));
+            $on.dom(() => baguetteBox.run('#condo-laval', { 
+                captions: (el) => {
+                    const prods = JSON.parse($get(el, 'data-products'));
+                    const project_name = JSON.parse($get(el, 'data-projects'));
+                    const project_name_ = $map(project_name,i => i.project);
+                    const productsName = $map(prods, i => `<li><span class='product'>${i}</span></li>`).join(' '); 
+                    return `<h2>${PRODUCTS_SHOWN}</h2> <h6>${project_name_}</h6> <ul class='products'>${productsName}</ul>`;
+                }
+            }));
+</script>

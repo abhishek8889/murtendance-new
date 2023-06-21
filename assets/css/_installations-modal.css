@@ -1,0 +1,64 @@
+section#installation-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+section#installation-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#baguetteBox-overlay .full-image ul.products {
+    flex-direction: row;
+}
+#baguetteBox-overlay .full-image ul.products li {
+    display: block;
+    width: 33.33%;
+    font-family: var(--font-sans-serif);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#baguetteBox-overlay .full-image figure {
+    width: 100%;
+    max-width: 680px;
+}
+
+#baguetteBox-overlay .full-image ul.products li span {
+    font-weight: 400;
+}
+
+#baguetteBox-overlay .full-image figure h6 {
+    font-family: var(--font-sans-serif);
+    font-weight: 600;
+}
+
+.project-slider-wrapper > a {
+    position: relative;
+    padding-top: 125%;
+    display: inline-block;
+    width: 100%;
+}
+
+.project-slider-wrapper > a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+section#installation-items {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+/* div#baguette-img-1 {
+    display: none !important;
+} */

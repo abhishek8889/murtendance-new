@@ -1,0 +1,4 @@
+{{- $images := resources.Match "images/*.JPG" -}}
+{{- range $images -}}
+   <img src="{{ .RelPermalink }}" alt="">
+{{- end -}}
